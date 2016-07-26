@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{4E7C161B-426A-9431-B53A-C07B6558A4E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_3_5;UNITY_5_3;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;CROSS_PLATFORM_INPUT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Scripts\MeteorBehavior.cs" />
+     <Compile Include="Assets\Scripts\RotateCircle.cs" />
+     <Compile Include="Assets\Scripts\SpawnMeteors.cs" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\BankFolder\{8037d7a9-e4c9-42ca-b7f9-a9f3caf0fb09}.xml" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\Asset\{2c4b36cb-0651-440b-bc95-43a9a1c0edd1}.xml" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\Workspace.xml" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Build\GUIDs.txt" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\EventFolder\{f7c7ca9a-a6ed-41d3-af0a-8410fbf0d84c}.xml" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\EncodingSetting\{99f7873d-a841-4d91-bf66-1e5c27f6a5ed}.xml" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\Tags.xml" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\EncodingSetting\{b0ab2a54-aced-495c-9557-5d5e8ad777f8}.xml" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\Return\{e6083bb6-098b-4e12-9df2-8bc2dd3c4a71}.xml" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\Master.xml" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\EventFolder\{c8ccb3e2-231e-4f7e-91e2-2865b6969843}.xml" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\SnapshotGroup\{6cb43e1d-30e4-4b15-95fc-1e42d3793615}.xml" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\Mixer.xml" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\Event\{63d825bd-bfcd-468f-ab66-fe6baf74e361}.xml" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\AudioFile\{6f348bc4-14ab-4d2b-8d38-c27beae27d26}.xml" />
+     <None Include="Assets\Audio\FMODProjecct_ShapeShaker\Metadata\Bank\{712d4ff7-c818-46fb-a9c5-417271bead5d}.xml" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{BAB6846E-7851-0239-FC95-A00BE19B703F}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

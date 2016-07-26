@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{6f348bc4-14ab-4d2b-8d38-c27beae27d26}">
+        <property name="assetPath">
+            <value>LevelMusic2_cmp.aif</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>22.0499992</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>31.199999999999999</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{2c4b36cb-0651-440b-bc95-43a9a1c0edd1}</destination>
+        </relationship>
+    </object>
+</objects>
