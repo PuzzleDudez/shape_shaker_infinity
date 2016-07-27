@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21295612}
   - 114: {fileID: 11433222}
   - 50: {fileID: 5042574}
-  - 58: {fileID: 5899382}
+  - 58: {fileID: 5806932}
   m_Layer: 0
   m_Name: MeteorPrefab
   m_TagString: Untagged
@@ -48,8 +48,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!58 &5899382
+  m_Constraints: 4
+--- !u!58 &5806932
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -57,12 +57,12 @@ CircleCollider2D:
   m_GameObject: {fileID: 119758}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 0cb77231a430b454fb792ff7ffcc3943, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.09142844
+  m_Radius: 0.09
 --- !u!114 &11433222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8899dd3bc20a04ea39808b828cc494fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shouldMove: 1
 --- !u!212 &21295612
 SpriteRenderer:
   m_ObjectHideFlags: 1

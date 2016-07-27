@@ -17,7 +17,7 @@ public class SpawnMeteors : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        InvokeRepeating("Spawn", 0.5f, 0.5f);
+        InvokeRepeating("Spawn", 1, 1);
     }
 
     // Update is called once per frame

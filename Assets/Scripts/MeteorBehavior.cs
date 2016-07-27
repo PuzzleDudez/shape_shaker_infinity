@@ -89,6 +89,7 @@ public class MeteorBehavior : MonoBehaviour
     //perhaps because this is ignored when objects are destroyed?
     void OnCollisionExit2D(Collider2D coll)
     {
+        //Debug.Log("collision exit");
         coll.transform.parent = null;   //doesn't work
         transform.parent = null;
     }
