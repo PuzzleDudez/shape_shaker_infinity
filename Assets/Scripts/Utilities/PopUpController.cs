@@ -51,7 +51,7 @@ public class PopUpController : MonoBehaviour
         // Numbers will fall "down" and to the side
         //PopUp.transform.position = new Vector3(XAxisOffSet, YAxisOffSet, ZAxisOffSet);
 
-        if (DeleteTime <= Time.time || ObjectOfEffect == null)
+        if (DeleteTime <= Time.time)
             Destroy(PopUp);
     }
 
@@ -70,11 +70,13 @@ public class PopUpController : MonoBehaviour
         //ZAxisOffSet = PopUp.transform.position.z;
         //FallDirection = UnityEngine.Random.Range(0, 1);
 
+        // Parent for popup values
         PopUpHolder = GameObject.FindGameObjectWithTag("PopUpHolder");
 
         // Set parent to PopUpHolder -- create PopUpHolder in scene if not found
-        if (!PopUpHolder)
+        if (!GameObject.FindGameObjectWithTag("PopUpHolder"))
             PopUpHolder = ScriptableObject.Instantiate(Resources.Load(PopUpHolderLocation)) as GameObject;
+
         PopUp.transform.parent = PopUpHolder.transform;
 
         // Set initial position to enemy
@@ -99,8 +101,18 @@ public class PopUpController : MonoBehaviour
     private void DisplayPointsGained()
     {
         string amountToDisplay = "+" + AmountToDisplay.ToString();
+        Color textColor = Color.black;
 
-        _TextMesh.color = Color.green;
+        if (ObjectOfEffect.tag == "green")
+            textColor = Color.green;
+        else if (ObjectOfEffect.tag == "red")
+            textColor = Color.red;
+        else if (ObjectOfEffect.tag == "cyan")
+            textColor = Color.cyan;
+        else if (ObjectOfEffect.tag == "magenta")
+            textColor = Color.magenta;
+
+        _TextMesh.color = textColor;
         _TextMesh.text = amountToDisplay;
     }
 }

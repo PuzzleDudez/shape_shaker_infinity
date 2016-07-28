@@ -36,8 +36,8 @@ public class PopUp<T>
     private void SetPopUp_Position()
     {
         // PopUp position is random within a range.
-        float[] pos = { 0, 0, 0 };
-        for (int i = 0; i < 2; i++)
+        float[] pos = { 0, 0};
+        for (int i = 0; i < 1; i++)
             pos[i] = UnityEngine.Random.Range(-0.2f, 0.2f);
 
         // Initial position will be above the meteor.

@@ -74,18 +74,15 @@ public class MeteorBehavior : MonoBehaviour
             //Debug.Log (count);
 
             // Display pop up point value above meteors
-            Debug.Log("Pop!");
             ShowPopUp(3);
 
             // if same colors collide, kill em
             Destroy(this.gameObject);
             Destroy(coll.gameObject);
-           
         }
 
         if (coll.gameObject.tag != "planetoid")
         {
-            Debug.Log(planet.transform.ToString());
             coll.transform.parent = planet.transform;
         }
     }
@@ -101,7 +98,7 @@ public class MeteorBehavior : MonoBehaviour
     //Tried to fix it so meteors wouldn't be left floating when their buddies were destroyed
     //in theory i tried to set its parent to null so that it would be told to start moving again
     //perhaps because this is ignored when objects are destroyed?
-    void OnCollisionExit2D(Collider2D coll)
+    void OnCollisionExit2D(Collision2D coll)
     {
         //Debug.Log("collision exit");
         coll.transform.parent = null;   //doesn't work
