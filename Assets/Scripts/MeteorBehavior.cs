@@ -17,7 +17,9 @@ public class MeteorBehavior : MonoBehaviour
     void Start()
     {
         //rb = GetComponent<Rigidbody2D>();
-        planet = GameObject.Find("planetoid2");
+        planet = GameObject.FindWithTag("planetoid");
+
+        //Debug.Log("Planet name: " + planet.ToString() + "");
 
         //planetRB = planet.GetComponent<Rigidbody2D>();
 
@@ -70,8 +72,11 @@ public class MeteorBehavior : MonoBehaviour
         {
             //count++;
             //Debug.Log (count);
-            
-            
+
+            // Display pop up point value above meteors
+            Debug.Log("Pop!");
+            ShowPopUp(3);
+
             // if same colors collide, kill em
             Destroy(this.gameObject);
             Destroy(coll.gameObject);
@@ -80,8 +85,17 @@ public class MeteorBehavior : MonoBehaviour
 
         if (coll.gameObject.tag != "planetoid")
         {
+            Debug.Log(planet.transform.ToString());
             coll.transform.parent = planet.transform;
         }
+    }
+
+    /// <summary>
+    /// Display damage taken above the enemy
+    /// </summary>
+    public void ShowPopUp(float totalValue)
+    {
+        PopUp<MeteorBehavior> popUp = new PopUp<MeteorBehavior>(this.gameObject, totalValue, 0.5f);
     }
 
     //Tried to fix it so meteors wouldn't be left floating when their buddies were destroyed

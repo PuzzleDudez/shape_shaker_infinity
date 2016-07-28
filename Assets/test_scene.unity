@@ -367,7 +367,6 @@ MonoBehaviour:
   borderBottom: {fileID: 1424242650}
   borderLeft: {fileID: 2051990229}
   borderRight: {fileID: 1083978948}
-  meteorPrefab: {fileID: 0}
   meteorList: []
 --- !u!114 &1590022368
 MonoBehaviour:
@@ -429,6 +428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa978a4fc692f4518b0902224f2fdc44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coll: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!212 &1806257410
 SpriteRenderer:
   m_ObjectHideFlags: 0
