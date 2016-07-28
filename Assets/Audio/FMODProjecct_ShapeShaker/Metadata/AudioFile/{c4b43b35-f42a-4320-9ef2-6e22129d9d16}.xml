@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{c4b43b35-f42a-4320-9ef2-6e22129d9d16}">
+        <property name="assetPath">
+            <value>menu button click.aif</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.82192743764172338</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{2c4b36cb-0651-440b-bc95-43a9a1c0edd1}</destination>
+        </relationship>
+    </object>
+</objects>

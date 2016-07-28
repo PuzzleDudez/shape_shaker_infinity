@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.08.00">
     <object class="Event" id="{63d825bd-bfcd-468f-ab66-fe6baf74e361}">
         <property name="name">
-            <value>LevelMusic2_cmp</value>
+            <value>Wacky AF</value>
         </property>
         <property name="outputFormat">
             <value>2</value>
@@ -71,7 +71,7 @@
             <destination>{fb6d6d97-8f22-43ca-9033-1ebf4a1a63ad}</destination>
         </relationship>
         <relationship name="markers">
-            <destination>{7b00f77b-ab5d-4893-8597-fb7914078655}</destination>
+            <destination>{3c006a89-6296-496d-af9f-22d08daf338a}</destination>
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{2a7a7649-b811-48c7-a5c7-ab3ab2949046}">
@@ -93,7 +93,7 @@
     <object class="MixerBusPanner" id="{cd4ae712-9791-4724-aac1-7cf0f1db27b3}"/>
     <object class="SingleSound" id="{fb6d6d97-8f22-43ca-9033-1ebf4a1a63ad}">
         <property name="start">
-            <value>0.2538966365873665</value>
+            <value>0</value>
         </property>
         <property name="length">
             <value>31.199999999999999</value>
@@ -116,12 +116,12 @@
             <destination>{2a7a7649-b811-48c7-a5c7-ab3ab2949046}</destination>
         </relationship>
     </object>
-    <object class="LoopRegion" id="{7b00f77b-ab5d-4893-8597-fb7914078655}">
+    <object class="LoopRegion" id="{3c006a89-6296-496d-af9f-22d08daf338a}">
         <property name="position">
-            <value>0</value>
+            <value>12</value>
         </property>
         <property name="length">
-            <value>31.453896636587366</value>
+            <value>9.6000000000000014</value>
         </property>
         <relationship name="timeline">
             <destination>{1ae8276a-2eaa-439d-8a3f-958ad4db5a7a}</destination>
