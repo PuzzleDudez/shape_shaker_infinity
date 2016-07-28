@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{94091c61-9af4-4892-8889-f72cd5175cd0}">
+        <property name="assetPath">
+            <value>Main Menu.aif</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>60</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{2c4b36cb-0651-440b-bc95-43a9a1c0edd1}</destination>
+        </relationship>
+    </object>
+</objects>
