@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 469790}
   - 23: {fileID: 2327458}
   - 102: {fileID: 10238358}
+  - 114: {fileID: 11431204}
   m_Layer: 0
   m_Name: PopUp
   m_TagString: PopUp
@@ -77,6 +78,30 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4278190335
+--- !u!114 &11431204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eebc3814ac12ef49af280056db0e0ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowDebugLogs: 0
+  PopUpLocation: 
+  PopUp_GO: {fileID: 0}
+  ObjectOfEffect: {fileID: 0}
+  ValueToDisplay: 0
+  DisplayLength: 0
+  DeleteTime: 0
+  FadeSpeed: 0
+  FloatSpeed: 0
+  PopUp_Pos: {x: 0, y: 0}
+  Parent_Pos: {x: 0, y: 0}
+  ObjectOfEffect_Pos: {x: 0, y: 0}
+  _TextMesh: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

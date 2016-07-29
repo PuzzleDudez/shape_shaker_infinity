@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 public class MeteorBehavior : MonoBehaviour
 {
-
     float ran;
     float count = 0;
     public bool shouldMove = true;
+
     //Rigidbody2D rb;
     //Rigidbody2D planetRB;
     GameObject planet;
@@ -92,7 +92,7 @@ public class MeteorBehavior : MonoBehaviour
     /// </summary>
     public void ShowPopUp(float totalValue)
     {
-        PopUp<MeteorBehavior> popUp = new PopUp<MeteorBehavior>(this.gameObject, totalValue, 0.5f);
+        PopUpManager.Instance.InitializePopUp(this.gameObject, totalValue, 0.5f, this.GetType(), gameObject.GetComponent<Renderer>().material.color);
     }
 
     //Tried to fix it so meteors wouldn't be left floating when their buddies were destroyed

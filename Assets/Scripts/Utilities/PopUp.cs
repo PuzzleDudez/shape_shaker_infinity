@@ -1,63 +1,66 @@
 ﻿using UnityEngine;
 
 /// <summary>
-/// Helps create the prefab for the PopUpController.cs class (two classes are necessary since generic (<T>)
-/// wont work attached to a GameObject.
+/// A popup value/string that appears above a GameObject.
 /// Control the initial position of the numbers here.
 /// Owner: John Fitzgerald
 /// </summary>
-public class PopUp<T>
+public class PopUp : MonoBehaviour
 {
-    public bool ShowDebugLogs = true;
+    public string PopUpLocation = "Utilities/PopUp";
 
-    private string PopUpLocation = "Utilities/PopUp";
+    public GameObject PopUp_GO;
+    public GameObject ObjectOfEffect_GO;
+    public System.Type ObjectOfEffect_Type; // The GameObject that triggered PopUp
+    public TextMesh _TextMesh;
 
-    private GameObject PopUpDisplay;
-    private GameObject ObjectOfEffect;
+    // Value/string options
+    public int ValueToDisplay;
+    public float DisplayLength;
+    public float DeleteTime;
+    public float FadeSpeed;
+    public float FloatSpeed;
 
-    private float ValueToDisplay;
-    private float DisplayLength;
+    // Needed PopUp positions
+    public Vector2 Parent_Pos;              // PopUpManager's position
+    public Vector2 ObjectOfEffect_Pos; 
+    public Vector2 PopUp_Pos;
 
-    private Vector2 PopUp_Pos;
-    private Vector2 Parent_Pos;
-
-    public PopUp(GameObject objectOfEffect, float valueToDisplay, float displayLength)
+    /// <summary>
+    /// Sloppy constructor (can't have normal constructor because of Monobehaviour)
+    /// </summary>
+    public void _PopUp(GameObject objectOfEffect_GO, GameObject popUp_GO, float valueToDisplay, float displayLength, System.Type type, Color color)
     {
-        ObjectOfEffect = objectOfEffect;
-        ValueToDisplay = valueToDisplay;
-        DisplayLength = displayLength;
-        Parent_Pos = objectOfEffect.gameObject.transform.position;
+        PopUp_GO = popUp_GO;
+        ObjectOfEffect_GO = objectOfEffect_GO;
+        PopUp_GO.transform.parent = PopUpManager.Instance.transform;
+        ObjectOfEffect_Type = type;
+        _TextMesh = gameObject.GetComponent<TextMesh>();
+        _TextMesh.color = color;
 
-        SetPopUp_Position();
-        InstantiatePopUp_Prefab();
-        InitializePopUp_GO();
+        ValueToDisplay = (int)valueToDisplay;
+        DisplayLength = displayLength;
+        DeleteTime = Time.time + DisplayLength;
+        // TO-DO: change so FadeSpeed and FloatSpeed aren't hard coded
+        FadeSpeed = 4f;
+        FloatSpeed = 2f;
+
+        Parent_Pos = PopUpManager.Instance.gameObject.transform.position;
+        ObjectOfEffect_Pos = ObjectOfEffect_GO.transform.position;
+        SetPopUp_Pos();
     }
 
-    private void SetPopUp_Position()
+    /// <summary>
+    /// Sets PopUp position randomly in the vacininty of the object of effect
+    /// </summary>
+    private void SetPopUp_Pos()
     {
         // PopUp position is random within a range.
         float[] pos = { 0, 0};
         for (int i = 0; i < 1; i++)
             pos[i] = UnityEngine.Random.Range(-0.2f, 0.2f);
 
-        // Initial position will be above the meteor.
-        PopUp_Pos = new Vector2(Parent_Pos.x + pos[0], Parent_Pos.y + pos[1]);//, Parent_Pos.z + pos[2] - 2f);
-    }
-
-    private void InstantiatePopUp_Prefab()
-    {
-        // Instantiate the PopUp prefab and add the PopUpController script to it
-        PopUpDisplay = ScriptableObject.Instantiate(Resources.Load(PopUpLocation), PopUp_Pos, Camera.main.transform.rotation) as GameObject;
-
-        //PopUpDisplay = Instantiate(Resources.Load(popUpLocation)) as GameObject;
-        //PopUpDisplay.transform.position = PopUp_Pos;
-        //PopUpDisplay.transform.rotation = Camera.main.transform.rotation;
-    }
-
-    private void InitializePopUp_GO()
-    {
-        PopUpController popUpController_Script = PopUpDisplay.AddComponent<PopUpController>();
-
-        popUpController_Script.InitializePopUp(PopUpDisplay, ObjectOfEffect, DisplayLength, ValueToDisplay, typeof(T));
+        // Initial position will be above the debri.
+        PopUp_Pos = new Vector2(ObjectOfEffect_Pos.x + pos[0], ObjectOfEffect_Pos.y + pos[1]);
     }
 }
