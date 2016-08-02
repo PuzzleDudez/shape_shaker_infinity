@@ -55,7 +55,16 @@ public class InputManager : MonoBehaviour
                 rotatePlanetoidKeyPressed(-1);
             }
         }
-		else if(Input.GetKeyDown(KeyCode.Escape))
+        // The user has lifted their finger from the rotation button(s)
+        else if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
+        {
+            if (rotatePlanetoidKeyPressed != null)
+            {
+                rotatePlanetoidKeyPressed(0);
+            }
+        }
+
+		if(Input.GetKeyDown(KeyCode.Escape))
 		{
             // TO-DO: pause menu
 		}

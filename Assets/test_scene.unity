@@ -112,12 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ae2f32717c9824fb0dc64b094a9d4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmountToDisplay: 0
-  DeleteTime: 0
-  FadeSpeed: 4
-  FloatSpeed: 2
-  PopUp_Position: {x: 0, y: 0}
-  _TextMesh: {fileID: 10238358, guid: 17b5e34143be54b458c4d5f3ff270321, type: 2}
+  CurrentMeteorPopUpList: []
+  PopUpLocation: Utilities/PopUp
 --- !u!1 &1083978946
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coll: {fileID: 0}
   rb: {fileID: 0}
+  Direction: 0
 --- !u!212 &1806257410
 SpriteRenderer:
   m_ObjectHideFlags: 0
