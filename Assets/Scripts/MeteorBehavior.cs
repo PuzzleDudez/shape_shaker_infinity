@@ -84,7 +84,7 @@ public class MeteorBehavior : MonoBehaviour
         // make meteor hitting planetoid SFX
         if (coll.gameObject.tag == "planetoid")
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/meteor hits planetoid", this.transform.position);
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/meteor hits planetoid", this.transform.position);
         }
         else
         {

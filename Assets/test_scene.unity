@@ -534,6 +534,7 @@ GameObject:
   - 60: {fileID: 1806257412}
   - 50: {fileID: 1806257413}
   - 114: {fileID: 1806257409}
+  - 114: {fileID: 1806257414}
   m_Layer: 0
   m_Name: 'Planetoid '
   m_TagString: planetoid
@@ -554,7 +555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coll: {fileID: 0}
   rb: {fileID: 0}
-  Direction: 0
+  _Direction: 0
 --- !u!212 &1806257410
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -757,6 +758,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &1806257414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1806257408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Emitters: []
+  TriggerEvent: 0
+  CollisionTag: 
 --- !u!1 &2051990227
 GameObject:
   m_ObjectHideFlags: 0

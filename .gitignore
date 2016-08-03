@@ -28,5 +28,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# FMOD
 fmod.log
 fmod_editor.log
+Assets/Audio/FMODProjecct_ShapeShaker/.cache
+Assets/Audio/FMODProjecct_ShapeShaker/.user

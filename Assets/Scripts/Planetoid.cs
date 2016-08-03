@@ -5,42 +5,59 @@ public class Planetoid : MonoBehaviour
 {
     public CircleCollider2D coll;
     public Rigidbody2D rb;
-    public int Direction;
+
+    public int _Direction;
     private bool _PlaySound;
+
+    private FMOD.Studio.EventInstance RotationSound_FMOD;
+    private FMOD.Studio.ParameterInstance Direction;
 
     // Use this for initialization
     void Start()
     {
         // delegate event handling
         InputManager.Instance.rotatePlanetoidKeyPressed += this.RotatePlanetoid;
-        Direction = 0;
+
+        _Direction = 0;
         _PlaySound = false;
         coll = GetComponent<CircleCollider2D>();
+        
+        // FMOD sound
+        RotationSound_FMOD = FMODUnity.RuntimeManager.CreateInstance("event:/Sound Effects/Rotation");
+        // ensure null values are not sent to FMOD event
+        if (RotationSound_FMOD.getParameter("Direction", out Direction) != FMOD.RESULT.OK)
+        {
+            Debug.LogError("Direction parameter not found on RotationSound_FMOD sound event.");
+            return;
+        }
+        RotationSound_FMOD.start();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Direction < 0 || Direction > 0)
+        if (_Direction < 0 || _Direction > 0)
         {
             _PlaySound = true;
+            Direction.setValue(_Direction);
         }
         else
         {
             _PlaySound = false;
+            Direction.setValue(_Direction);
         }
     }
 
     void RotatePlanetoid(int direction)
     {
-        Direction = direction;
+        _Direction = direction;
 
-        if (Direction > 0)
+        if (_Direction > 0)
         {
             transform.Rotate(Vector3.forward, (Time.deltaTime * 200), Space.World);
             //Debug.Log ("Left key was pressed.");
         }
-        else if (Direction < 0)
+        else if (_Direction < 0)
         {
             transform.Rotate(Vector3.forward, (Time.deltaTime * -200), Space.World);
             //Debug.Log ("Right key was pressed.");
