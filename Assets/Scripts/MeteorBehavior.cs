@@ -7,6 +7,7 @@ public class MeteorBehavior : MonoBehaviour
     float ran;
     float count = 0;
     public bool shouldMove = true;
+    int ScoreAmount;
 
     //Rigidbody2D rb;
     //Rigidbody2D planetRB;
@@ -18,6 +19,7 @@ public class MeteorBehavior : MonoBehaviour
     {
         //rb = GetComponent<Rigidbody2D>();
         planet = GameObject.FindWithTag("planetoid");
+        ScoreAmount = 3;
 
         //Debug.Log("Planet name: " + planet.ToString() + "");
 
@@ -74,7 +76,8 @@ public class MeteorBehavior : MonoBehaviour
             //Debug.Log (count);
 
             // Display pop up point value above meteors
-            ShowPopUp(3);
+            ShowPopUp(ScoreAmount);
+            ScoreManager.Instance.AddScore(ScoreAmount);
 
             // if same colors collide, kill em
             Destroy(this.gameObject);
@@ -84,7 +87,7 @@ public class MeteorBehavior : MonoBehaviour
         // make meteor hitting planetoid SFX
         if (coll.gameObject.tag == "planetoid")
         {
-            //FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/meteor hits planetoid", this.transform.position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Sound Effects/meteor hits planetoid", this.transform.position);
         }
         else
         {

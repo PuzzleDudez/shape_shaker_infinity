@@ -26,7 +26,7 @@ MonoBehaviour:
   - {fileID: 11407610}
   MasterBankRef: {fileID: 11454064}
   StringsBankRef: {fileID: 11480374}
-  stringsBankWriteTime: 636057583375845436
+  stringsBankWriteTime: 636061925881356292
   cacheVersion: 2
 --- !u!114 &11401176
 MonoBehaviour:
@@ -169,7 +169,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 11496792}
+  - {fileID: 11423402}
   MinDistance: 1
   MaxDistance: 20
 --- !u!114 &11408410
@@ -327,6 +327,21 @@ MonoBehaviour:
   Min: 0
   Max: 10000
   Default: 0
+--- !u!114 &11423402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  Name: Direction
+  Min: -1
+  Max: 1
+  Default: -1
 --- !u!114 &11424822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,7 +770,7 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   Path: Assets\Audio\FMODProjecct_ShapeShaker\Build\Desktop\Master Bank.bank
-  lastModified: 636057583375820394
+  lastModified: 636061925881341320
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -1110,7 +1125,7 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   Path: Assets\Audio\FMODProjecct_ShapeShaker\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636057583375845436
+  lastModified: 636061925881356292
   LoadResult: 0
   FileSizes:
   - Name: 
